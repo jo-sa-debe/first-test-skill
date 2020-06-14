@@ -13,13 +13,16 @@ class FirstTestSkill(MycroftSkill):
     @intent_file_handler('test.first.intent')
     def handle_test_first(self, message):
         
-        settingTxt = "Settings is set to " + str(self.setting_mp3_path.value)
-        self.speak(settingTxt)
+        if self.setting_mp3_path.value is not None:
+            settingTxt = "Settings is set to " + str(self.setting_mp3_path.value)
+            self.speak(settingTxt)
 
-        mp3_path = "file://" + str(self.setting_mp3_path.value)
+            mp3_path = "file://" + str(self.setting_mp3_path.value)
 
-        self.audio_service.play(mp3_path)
-
+            self.audio_service.play(mp3_path)
+        else
+            self.speak("Settings for path_for_mp3 not found""
+            
         self.speak_dialog('test.first')
         
 
