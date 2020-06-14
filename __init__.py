@@ -16,6 +16,7 @@ class FirstTestSkill(MycroftSkill):
         
         for self.backendval in self.audioService.available_backends().values():
             self.speak(self.backendval)
+            print(self.backendval)
             
         self.speak_dialog('test.first')
         
