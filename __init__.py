@@ -1,9 +1,13 @@
 from mycroft import MycroftSkill, intent_file_handler
+from mycroft.messagebus import message
 
 
-class FirstTest(MycroftSkill):
+class FirstTestSkill(MycroftSkill):
     def __init__(self):
         MycroftSkill.__init__(self)
+
+    def initialize(self): 
+        my_setting = self.settings.get('my_setting')
 
     @intent_file_handler('test.first.intent')
     def handle_test_first(self, message):
@@ -11,5 +15,8 @@ class FirstTest(MycroftSkill):
 
 
 def create_skill():
-    return FirstTest()
+    return FirstTestSkill()
+
+def stop(self):
+    pass
 

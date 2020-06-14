@@ -3,10 +3,10 @@ skillMetadata:
   sections:
     - name: Options << Name of section
       fields:
-        - name: internal_python_variable_name
+        - name: my_setting
           type: text
-          label: Setting Friendly Display Name
-          value: ""
+          label: My Setting
+          value: "value_for_setting"
           placeholder: demo prompt in the input box
     - name: Login << Name of another section
       fields:
