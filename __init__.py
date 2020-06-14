@@ -13,10 +13,10 @@ class FirstTestSkill(MycroftSkill):
     @intent_file_handler('test.first.intent')
     def handle_test_first(self, message):
         
-        settingTxt = "Settings is set to " + self.setting_mp3_path
+        settingTxt = "Settings is set to " + str(self.setting_mp3_path)
         self.speak(settingTxt)
 
-        self.audio_service.play(self.setting_mp3_path)
+        self.audio_service.play(str(self.setting_mp3_path))
 
         self.speak_dialog('test.first')
         
