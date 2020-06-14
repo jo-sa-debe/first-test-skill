@@ -3,11 +3,11 @@ skillMetadata:
   sections:
     - name: Options << Name of section
       fields:
-        - name: my_setting
+        - name: path_for_mp3
           type: text
-          label: My Setting
-          value: "value_for_setting"
-          placeholder: demo prompt in the input box
+          label: Location for MP3 file
+          value: "/home/jsauwen/Musik/101-samim_-_heater.mp3"
+          placeholder: path for mp3 file
     - name: Login << Name of another section
       fields:
         - type: label

@@ -7,20 +7,17 @@ class FirstTestSkill(MycroftSkill):
         MycroftSkill.__init__(self)
 
     def initialize(self): 
-        self.my_setting = self.settings.get('my_setting')
-        self.audioService = AudioService(self.bus)
+        self.setting_mp3_path = self.settings.get('path_for_mp3')
+        self.audio_service = AudioService(self.bus)
 
     @intent_file_handler('test.first.intent')
     def handle_test_first(self, message):
         
-        settingTxt = "Settings is set to " + self.my_setting
+        settingTxt = "Settings is set to " + self.setting_mp3_path
         self.speak(settingTxt)
-        self.speak('checking backends')
 
-        for backendval in self.audioService.available_backends().values():
-            self.speak(backendval)
-            print(backendval)
-            
+        self.audio_service.play(self.setting_mp3_path)
+
         self.speak_dialog('test.first')
         
 
