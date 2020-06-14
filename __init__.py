@@ -22,7 +22,7 @@ class FirstTestSkill(MycroftSkill):
             self.audio_service.play(mp3_path)
         else:
             self.speak("Settings for path_for_mp3 not found")
-            mp3_path = "file:///home/jsauwen/Musik/01 Mars.mp3")
+            mp3_path = "file:///home/jsauwen/Musik/01 Mars.mp3"
             self.audio_service.play(mp3_path)
 
         self.speak_dialog('test.first')
