@@ -14,7 +14,7 @@ class FirstTestSkill(MycroftSkill):
     @intent_file_handler('test.first.intent')
     def handle_test_first(self, message):
         
-        for backendval in AudioService.available_backends().values()
+        for backendval in AudioService.available_backends().values():
             self.speak(backendval)
             
         self.speak_dialog('test.first')
