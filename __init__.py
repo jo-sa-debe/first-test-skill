@@ -16,7 +16,7 @@ class FirstTestSkill(MycroftSkill):
         settingTxt = "Settings is set to " + str(self.setting_mp3_path.value)
         self.speak(settingTxt)
 
-        mp3_path = "file://" + str(path_for_mp3.value)
+        mp3_path = "file://" + str(self.setting_mp3_path.value)
 
         self.audio_service.play(mp3_path)
 
